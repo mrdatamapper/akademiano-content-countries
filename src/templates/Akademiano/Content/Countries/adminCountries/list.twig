@@ -27,10 +27,12 @@
                             {{ item.title }}
                         </td>
                         <td>
-                            <a href="{{ url(item_edit_route, {"id": item.id.hex}) }}" rel="tooltip" title="Edit" class="btn btn-warning btn-simple btn-sm">
+                            <a href="{{ url(item_edit_route, {"id": item.id.hex}) }}" rel="tooltip" title="Edit"
+                               class="btn btn-warning btn-simple btn-sm">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="{{ url(item_delete_route, {"id": item.id.hex}) }}" rel="tooltip" title="Delete" class="btn btn-danger btn-simple btn-sm">
+                            <a href="{{ url(item_delete_route, {"id": item.id.hex}) }}" rel="tooltip" title="Delete"
+                               class="btn btn-danger btn-simple btn-sm">
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>
@@ -38,6 +40,9 @@
                 {% endfor %}
                 </tbody>
             </table>
+        </div>
+        <div class="card-footer">
+            {% include "utils/pagination.twig" %}
         </div>
     </div>
 {% endblock mainContainerContent %}
